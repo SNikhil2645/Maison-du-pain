@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maison du Pain — Artisan Bakery & Custom Cakes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- PRELOADER -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-text">
+      <span style="animation-delay:.1s">M</span><span style="animation-delay:.15s">a</span><span style="animation-delay:.2s">i</span><span style="animation-delay:.25s">s</span><span style="animation-delay:.3s">o</span><span style="animation-delay:.35s">n</span><span style="animation-delay:.4s">&nbsp;</span><span style="animation-delay:.45s">d</span><span style="animation-delay:.5s">u</span><span style="animation-delay:.55s">&nbsp;</span><span style="animation-delay:.6s">P</span><span style="animation-delay:.65s">a</span><span style="animation-delay:.7s">i</span><span style="animation-delay:.75s">n</span>
+    </div>
+    <div class="preloader-bar"><div class="preloader-fill"></div></div>
+  </div>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">Maison du Pain</a>
+      <div class="nav-links">
+        <a href="#specialties">Menu</a>
+        <a href="#cake-builder">Build a Cake</a>
+        <a href="#cake-form">Custom Order</a>
+        <a href="#delivery">Delivery</a>
+        <a href="#seasonal">Festive</a>
+        <a href="#cake-form" class="nav-cta">Order Now</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#specialties" class="mobile-link">Menu</a>
+    <a href="#cake-builder" class="mobile-link">Build a Cake</a>
+    <a href="#cake-form" class="mobile-link">Custom Order</a>
+    <a href="#delivery" class="mobile-link">Delivery</a>
+    <a href="#seasonal" class="mobile-link">Festive</a>
+    <a href="#cake-form" class="btn btn-gold mobile-link">Order Now</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge reveal-scale">Est. 2019 &middot; Bengaluru</div>
+      <h1 class="reveal">Handcrafted with Heart,<br><em>Baked with Soul</em></h1>
+      <p class="reveal">Artisan breads, delicate French pastries, and bespoke celebration cakes &ndash; made fresh every morning with ingredients sourced from the finest farms.</p>
+      <div class="hero-btns reveal">
+        <a href="#cake-form" class="btn btn-gold">Order Custom Cake</a>
+        <a href="#cake-builder" class="btn btn-outline">Explore Menu</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="line"></div>
+      Scroll
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <div class="marquee-inner">
+      <span class="marquee-item">Artisan Sourdough <span class="dot"></span></span>
+      <span class="marquee-item">French Croissants <span class="dot"></span></span>
+      <span class="marquee-item">Custom Wedding Cakes <span class="dot"></span></span>
+      <span class="marquee-item">Pain au Chocolat <span class="dot"></span></span>
+      <span class="marquee-item">Almond Danish <span class="dot"></span></span>
+      <span class="marquee-item">Celebration Cakes <span class="dot"></span></span>
+      <span class="marquee-item">Focaccia <span class="dot"></span></span>
+      <span class="marquee-item">Macarons <span class="dot"></span></span>
+      <span class="marquee-item">Artisan Sourdough <span class="dot"></span></span>
+      <span class="marquee-item">French Croissants <span class="dot"></span></span>
+      <span class="marquee-item">Custom Wedding Cakes <span class="dot"></span></span>
+      <span class="marquee-item">Pain au Chocolat <span class="dot"></span></span>
+      <span class="marquee-item">Almond Danish <span class="dot"></span></span>
+      <span class="marquee-item">Celebration Cakes <span class="dot"></span></span>
+      <span class="marquee-item">Focaccia <span class="dot"></span></span>
+      <span class="marquee-item">Macarons <span class="dot"></span></span>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <div class="stat-number"><span data-target="12000" class="counter">0</span><span>+</span></div>
+          <div class="stat-label">Cakes Delivered</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number"><span data-target="6" class="counter">0</span></div>
+          <div class="stat-label">Years of Craft</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number"><span data-target="4800" class="counter">0</span><span>+</span></div>
+          <div class="stat-label">Happy Families</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number"><span data-target="100" class="counter">0</span><span>%</span></div>
+          <div class="stat-label">Fresh Daily</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIALTIES -->
+  <section class="specialties" id="specialties">
+    <div class="container text-center">
+      <span class="section-tag reveal">Our Craft</span>
+      <h2 class="section-title reveal">What We Bake Best</h2>
+      <p class="section-desc reveal">Every loaf, every layer, every crumb begins with slow fermentation, hand-selected ingredients, and generations of French baking tradition.</p>
+    </div>
+    <div class="container">
+      <div class="specialties-grid">
+        <div class="specialty-card reveal">
+          <div class="specialty-img">
+            <span class="specialty-number">01</span>
+            <img src="https://images.unsplash.com/photo-1549931319-a545753467c8?w=600&q=80" alt="Artisan Breads" />
+          </div>
+          <div class="specialty-body">
+            <h3>Artisan Breads</h3>
+            <p>San Francisco-style sourdough, herb-topped focaccia, and rustic country loaves &mdash; each one shaped by hand and baked in small batches.</p>
+            <a href="#" class="card-link">View Selection <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="specialty-card reveal">
+          <div class="specialty-img">
+            <span class="specialty-number">02</span>
+            <img src="https://images.unsplash.com/photo-1530610476181-d83430b64dcd?w=600&q=80" alt="Viennoiseries" />
+          </div>
+          <div class="specialty-body">
+            <h3>Viennoiseries</h3>
+            <p>Golden croissants, buttery pain au chocolat, and almond danishes &mdash; laminated with 72-hour cold-proofed dough for the perfect flake.</p>
+            <a href="#" class="card-link">Discover More <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="specialty-card reveal">
+          <div class="specialty-img">
+            <span class="specialty-number">03</span>
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80" alt="Celebration Cakes" />
+          </div>
+          <div class="specialty-body">
+            <h3>Celebration Cakes</h3>
+            <p>From elegant multi-tier wedding cakes to whimsical birthday creations &mdash; designed around your vision, baked to perfection.</p>
+            <a href="#cake-form" class="card-link">Enquire Now <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAKE BUILDER -->
+  <section class="cake-builder" id="cake-builder">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag reveal">Interactive</span>
+        <h2 class="section-title reveal">Design Your Dream Cake</h2>
+        <p class="section-desc reveal">Pick a flavour, choose your size, add a topping, and watch your cake come to life right here.</p>
+      </div>
+      <div class="builder-grid reveal">
+        <div class="builder-controls">
+          <div class="cake-builder-group" data-type="flavour">
+            <h4>Choose Flavour</h4>
+            <div class="cake-builder-options">
+              <button class="cake-builder-option active" data-value="chocolate">
+                <span class="swatch" style="background:#4A2C2A"></span> Chocolate Truffle
+              </button>
+              <button class="cake-builder-option" data-value="vanilla">
+                <span class="swatch" style="background:#F5E6C8"></span> Vanilla Bean
+              </button>
+              <button class="cake-builder-option" data-value="redvelvet">
+                <span class="swatch" style="background:#C0392B"></span> Red Velvet
+              </button>
+              <button class="cake-builder-option" data-value="caramel">
+                <span class="swatch" style="background:#D4A054"></span> Salted Caramel
+              </button>
+              <button class="cake-builder-option" data-value="mango">
+                <span class="swatch" style="background:#F4A940"></span> Mango
+              </button>
+              <button class="cake-builder-option" data-value="strawberry">
+                <span class="swatch" style="background:#E8739E"></span> Strawberry
+              </button>
+            </div>
+          </div>
+          <div class="cake-builder-group" data-type="size">
+            <h4>Select Size</h4>
+            <div class="cake-builder-options">
+              <button class="cake-builder-option" data-value="0.5kg">½ kg</button>
+              <button class="cake-builder-option active" data-value="1kg">1 kg</button>
+              <button class="cake-builder-option" data-value="2kg">2 kg</button>
+              <button class="cake-builder-option" data-value="3kg">3 kg</button>
+            </div>
+          </div>
+          <div class="cake-builder-group" data-type="topping">
+            <h4>Add Topping</h4>
+            <div class="cake-builder-options">
+              <button class="cake-builder-option active" data-value="none">
+                <span class="topping-icon">&#9675;</span> Classic
+              </button>
+              <button class="cake-builder-option" data-value="sprinkles">
+                <span class="topping-icon">&#127846;</span> Sprinkles
+              </button>
+              <button class="cake-builder-option" data-value="berries">
+                <span class="topping-icon">&#127826;</span> Fresh Berries
+              </button>
+              <button class="cake-builder-option" data-value="flowers">
+                <span class="topping-icon">&#127803;</span> Sugar Flowers
+              </button>
+              <button class="cake-builder-option" data-value="drip">
+                <span class="topping-icon">&#127856;</span> Chocolate Drip
+              </button>
+              <button class="cake-builder-option" data-value="goldleaf">
+                <span class="topping-icon">&#10024;</span> Gold Leaf
+              </button>
+            </div>
+          </div>
+          <div class="cake-builder-group">
+            <h4>Number of Layers</h4>
+            <div class="layer-control">
+              <button class="layer-btn" data-action="remove">&minus;</button>
+              <span id="layerCount">3</span>
+              <button class="layer-btn" data-action="add">+</button>
+            </div>
+          </div>
+          <div class="cake-builder-cta">
+            <a href="#cake-form" class="btn btn-gold">Order This Cake</a>
+          </div>
+        </div>
+        <div class="cake-preview">
+          <span class="cake-preview-label">Live Preview</span>
+          <svg id="cakeSVG" viewBox="0 0 250 220"></svg>
+          <div class="cake-preview-info">
+            <h3 id="cakePreviewName">Belgian Chocolate Truffle</h3>
+            <div class="size" id="cakePreviewSize">1 kg — Serves 12-15</div>
+            <div class="serves" id="cakePreviewServes">12–15 guests</div>
+            <div class="price" id="cakePreviewPrice">₹1,100</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPLIT SECTION -->
+  <section class="split-section">
+    <div class="container">
+      <div class="split-grid">
+        <div class="split-img reveal-left">
+          <div class="logo-mark">
+            <svg width="180" height="200" viewBox="0 0 180 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="90" cy="175" rx="70" ry="8" fill="#E8DFD3"/>
+              <rect x="45" y="100" width="90" height="70" rx="6" fill="#C8A96E" opacity="0.9"/>
+              <rect x="45" y="100" width="90" height="12" rx="6" fill="#D4B97A"/>
+              <rect x="55" y="60" width="70" height="44" rx="6" fill="#B8964F" opacity="0.9"/>
+              <rect x="55" y="60" width="70" height="10" rx="6" fill="#C8A96E"/>
+              <rect x="68" y="30" width="44" height="34" rx="6" fill="#A89279" opacity="0.9"/>
+              <rect x="68" y="30" width="44" height="8" rx="4" fill="#B8964F"/>
+              <circle cx="90" cy="22" r="6" fill="#C8A96E"/>
+              <line x1="90" y1="10" x2="90" y2="16" stroke="#C8A96E" stroke-width="2" stroke-linecap="round"/>
+              <path d="M85 10 Q90 4 95 10" stroke="#C8A96E" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              <text x="90" y="198" text-anchor="middle" font-family="'Playfair Display',serif" font-size="8" fill="#A89279" letter-spacing="2">MAISON DU PAIN</text>
+            </svg>
+          </div>
+          <div class="split-img-badge">
+            <span class="emoji">&#127856;</span>
+            <span>Handcrafted Daily</span>
+          </div>
+        </div>
+        <div class="split-text reveal-right">
+          <span class="section-tag">Why Maison du Pain</span>
+          <h2>Baked with <em>Passion</em>, Served with Love</h2>
+          <p>We believe that great baking is a blend of art, science, and heart. Every item that leaves our kitchen is the result of meticulous attention to detail and an unwavering commitment to quality.</p>
+          <ul class="split-list">
+            <li><span class="check">&#10003;</span> Slow-fermented doughs for depth of flavour</li>
+            <li><span class="check">&#10003;</span> Premium European butter & organic flour</li>
+            <li><span class="check">&#10003;</span> No preservatives, no shortcuts</li>
+            <li><span class="check">&#10003;</span> Baked fresh every morning before sunrise</li>
+          </ul>
+          <a href="#specialties" class="btn btn-dark">Discover Our Process</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOM CAKE FORM -->
+  <section class="cake-form-section" id="cake-form">
+    <div class="container">
+      <div class="form-card reveal" id="formCard">
+        <div class="text-center">
+          <span class="section-tag">Custom Orders</span>
+          <h2 class="section-title">Design Your Celebration Cake</h2>
+          <p class="section-desc">Every custom cake is baked to order. Please allow at least <strong>48 hours</strong> notice so our patissiers can create something truly special for you.</p>
+        </div>
+        <form id="cakeForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" placeholder="Priya Sharma" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="+91 98765 43210" required />
+            </div>
+            <div class="form-group">
+              <label for="flavour">Cake Flavour</label>
+              <select id="flavour" required>
+                <option value="" disabled selected>Select a flavour</option>
+                <option>Belgian Chocolate Truffle</option>
+                <option>Madagascar Vanilla Bean</option>
+                <option>Red Velvet Cream Cheese</option>
+                <option>Salted Caramel</option>
+                <option>Alphonso Mango</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="pickupDate">Pickup Date</label>
+              <input type="date" id="pickupDate" required />
+            </div>
+            <div class="form-group full">
+              <label>Cake Size</label>
+              <div class="radio-group">
+                <label><input type="radio" name="size" value="half" /> &frac12; kg</label>
+                <label><input type="radio" name="size" value="one" checked /> 1 kg</label>
+                <label><input type="radio" name="size" value="two" /> 2 kg</label>
+                <label><input type="radio" name="size" value="larger" /> Larger</label>
+              </div>
+            </div>
+            <div class="form-group full">
+              <label for="message">Special Theme / Message</label>
+              <textarea id="message" placeholder="Tell us about the occasion, colours, theme, or any special message you'd like on the cake..."></textarea>
+            </div>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-gold">Send Enquiry &ndash; We'll Confirm by Call</button>
+          </div>
+          <p class="form-note">&#9742; We will call you within 2 hours to confirm.</p>
+        </form>
+        <div class="form-thanks" id="formThanks">
+          <div class="icon">&#10003;</div>
+          <h3>Thank You!</h3>
+          <p>Your enquiry has been received. Our team will call you within 2 hours to confirm your custom cake order.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PICKUP & DELIVERY -->
+  <section class="delivery" id="delivery">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag reveal">Getting Your Order</span>
+        <h2 class="section-title reveal">Pickup & Local Delivery</h2>
+      </div>
+      <div class="delivery-grid">
+        <div class="delivery-card reveal-left">
+          <span class="badge">Free</span>
+          <h3>In-Store Pickup</h3>
+          <ul>
+            <li>Open daily from 8 AM &ndash; 10 PM</li>
+            <li>Hand-packed in our signature boxes</li>
+            <li>Ready within your chosen time slot</li>
+            <li>Collect from our bakery counter</li>
+          </ul>
+        </div>
+        <div class="delivery-card reveal-right">
+          <span class="badge">&#8377;49</span>
+          <h3>Local Delivery</h3>
+          <ul>
+            <li>Within 5 km of the bakery</li>
+            <li>Delivered 10 AM &ndash; 7 PM</li>
+            <li>Same-day available for daily menu items</li>
+            <li>Cakes delivered in temperature-safe packaging</li>
+          </ul>
+        </div>
+      </div>
+      <p class="delivery-note reveal">Unfortunately we don't ship cakes yet &ndash; they're too precious to travel far. &#128149;</p>
+    </div>
+  </section>
+
+  <!-- SEASONAL SPECIAL -->
+  <section class="seasonal" id="seasonal">
+    <div class="container reveal">
+      <div class="seasonal-text">
+        <span class="seasonal-tag">Festive Offer</span>
+        <h2>Diwali Sweet Boxes &ndash; Pre-order Now</h2>
+        <p>A curated gift box featuring motichoor ladoo truffles, gulab jamun cheesecake jars, and kesar pista cookies &mdash; the perfect festive indulgence for family and friends.</p>
+        <div class="seasonal-price">&#8377;899 per box <span>&#8377;1,299</span></div>
+        <a href="#cake-form" class="btn btn-outline">Pre-order Your Box</a>
+      </div>
+      <div class="seasonal-img">
+        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=600&q=80" alt="Diwali Sweet Box" />
+        <div class="price-tag">&#8377;899</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section class="instagram">
+    <div class="container text-center">
+      <span class="section-tag reveal">Social</span>
+      <h2 class="section-title reveal">Fresh From the Oven</h2>
+      <p class="section-desc reveal">Follow <strong>@maisondupain</strong> for daily bakes, behind-the-scenes stories, and seasonal specials.</p>
+      <div class="insta-grid reveal">
+        <div class="insta-item">
+          <img src="https://images.unsplash.com/photo-1555507036-ab1f4038024a?w=400&q=80" alt="Croissants" />
+          <div class="insta-overlay"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        </div>
+        <div class="insta-item">
+          <img src="https://images.unsplash.com/photo-1612203985729-70726954388c?w=400&q=80" alt="Fresh Bread" />
+          <div class="insta-overlay"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        </div>
+        <div class="insta-item">
+          <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&q=80" alt="Pastries" />
+          <div class="insta-overlay"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        </div>
+        <div class="insta-item">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&q=80" alt="Cake" />
+          <div class="insta-overlay"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        </div>
+        <div class="insta-item">
+          <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&q=80" alt="Cookies" />
+          <div class="insta-overlay"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        </div>
+        <div class="insta-item">
+          <img src="https://images.unsplash.com/photo-1585478259715-876acc5be8eb?w=400&q=80" alt="Sourdough" />
+          <div class="insta-overlay"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DELIVERED CAKES GALLERY -->
+  <section class="delivered" id="delivered">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag reveal">Our Creations</span>
+        <h2 class="section-title reveal">Cakes We've Delivered</h2>
+        <p class="section-desc reveal">Every cake tells a story. Here's a glimpse of the celebrations we've been proud to be part of.</p>
+      </div>
+      <div class="delivered-grid">
+        <div class="delivered-card reveal">
+          <div class="delivered-img">
+            <img src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?w=600&q=80" alt="Wedding Cake Delivery" />
+            <span class="delivered-badge">Wedding</span>
+          </div>
+          <div class="delivered-body">
+            <h4>Three-Tier Rose Gold Wedding Cake</h4>
+            <p>Custom fondant cake with hand-piped sugar flowers and edible gold leaf. Made for 200 guests at The Leela Palace.</p>
+            <div class="delivered-footer">
+              <div class="delivered-customer">
+                <div class="delivered-avatar">P</div>
+                <div>
+                  <div class="delivered-name">Priya &amp; Arjun</div>
+                  <div class="delivered-type">Wedding &middot; Dec 2025</div>
+                </div>
+              </div>
+              <div class="delivered-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+          </div>
+        </div>
+        <div class="delivered-card reveal">
+          <div class="delivered-img">
+            <img src="https://images.unsplash.com/photo-1562440499-64c9a111f713?w=600&q=80" alt="Birthday Cake Delivery" />
+            <span class="delivered-badge">Birthday</span>
+          </div>
+          <div class="delivered-body">
+            <h4>Rainbow Layer Birthday Cake</h4>
+            <p>Six vibrant layers with vanilla buttercream and a custom fondant topper for little Meera's 7th birthday bash.</p>
+            <div class="delivered-footer">
+              <div class="delivered-customer">
+                <div class="delivered-avatar">S</div>
+                <div>
+                  <div class="delivered-name">Sunita Reddy</div>
+                  <div class="delivered-type">Birthday &middot; Jan 2026</div>
+                </div>
+              </div>
+              <div class="delivered-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+          </div>
+        </div>
+        <div class="delivered-card reveal">
+          <div class="delivered-img">
+            <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?w=600&q=80" alt="Anniversary Cake Delivery" />
+            <span class="delivered-badge">Anniversary</span>
+          </div>
+          <div class="delivered-body">
+            <h4>Dark Chocolate Ganache Tower</h4>
+            <p>Rich Belgian chocolate layers with salted caramel drip and fresh berry cascade. A 10th anniversary showpiece.</p>
+            <div class="delivered-footer">
+              <div class="delivered-customer">
+                <div class="delivered-avatar">V</div>
+                <div>
+                  <div class="delivered-name">Vikram &amp; Neha Joshi</div>
+                  <div class="delivered-type">Anniversary &middot; Feb 2026</div>
+                </div>
+              </div>
+              <div class="delivered-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+          </div>
+        </div>
+        <div class="delivered-card reveal">
+          <div class="delivered-img">
+            <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=600&q=80" alt="Baby Shower Cake" />
+            <span class="delivered-badge">Baby Shower</span>
+          </div>
+          <div class="delivered-body">
+            <h4>Minimalist Baby Shower Cake</h4>
+            <p>Elegant two-tier pastel blue and cream cake with delicate fondant stars and a custom "Welcome Baby" topper.</p>
+            <div class="delivered-footer">
+              <div class="delivered-customer">
+                <div class="delivered-avatar">K</div>
+                <div>
+                  <div class="delivered-name">Kavitha Nair</div>
+                  <div class="delivered-type">Baby Shower &middot; Mar 2026</div>
+                </div>
+              </div>
+              <div class="delivered-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+          </div>
+        </div>
+        <div class="delivered-card reveal">
+          <div class="delivered-img">
+            <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=600&q=80" alt="Corporate Cake" />
+            <span class="delivered-badge">Corporate</span>
+          </div>
+          <div class="delivered-body">
+            <h4>Product Launch Celebration Cake</h4>
+            <p>Custom-branded two-tier cake with edible logo print and geometric gold accents for a tech company's big reveal.</p>
+            <div class="delivered-footer">
+              <div class="delivered-customer">
+                <div class="delivered-avatar">R</div>
+                <div>
+                  <div class="delivered-name">Rajesh Menon</div>
+                  <div class="delivered-type">Corporate &middot; Apr 2026</div>
+                </div>
+              </div>
+              <div class="delivered-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+          </div>
+        </div>
+        <div class="delivered-card reveal">
+          <div class="delivered-img">
+            <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=600&q=80" alt="Graduation Cake" />
+            <span class="delivered-badge">Graduation</span>
+          </div>
+          <div class="delivered-body">
+            <h4>Graduation Cap Celebration Cake</h4>
+            <p>Fun fondant graduation cap topper with custom message board. Double chocolate fudge with cookie crumble filling.</p>
+            <div class="delivered-footer">
+              <div class="delivered-customer">
+                <div class="delivered-avatar">D</div>
+                <div>
+                  <div class="delivered-name">Deepa &amp; family</div>
+                  <div class="delivered-type">Graduation &middot; May 2026</div>
+                </div>
+              </div>
+              <div class="delivered-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag reveal">Kind Words</span>
+        <h2 class="section-title reveal">What Our Guests Say</h2>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card reveal">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>&ldquo;The sourdough here is on another level &mdash; crispy crust, soft crumb, and that beautiful tang. I drive 20 minutes just for their loaves. Absolutely worth it.&rdquo;</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">A</div>
+            <div class="author-info">
+              <div class="name">Ananya Mehta</div>
+              <div class="title">Regular since 2020</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>&ldquo;They made my daughter's unicorn birthday cake and it was a showstopper. Not only did it look incredible, it tasted divine &mdash; the Belgian chocolate layers were perfection.&rdquo;</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">R</div>
+            <div class="author-info">
+              <div class="name">Rohit &amp; Sneha Kapoor</div>
+              <div class="title">Birthday Order</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>&ldquo;Their croissants remind me of mornings in Paris. Flaky, buttery, and absolutely divine with their house-blend coffee. This is my favourite spot in the city.&rdquo;</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">I</div>
+            <div class="author-info">
+              <div class="name">Dr. Ishaan Patel</div>
+              <div class="title">Food Blogger</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Maison du Pain</h4>
+          <p>An artisan bakery and custom cake shop where every creation is made with passion, patience, and the finest ingredients. Visit us and taste the difference.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Visit Us</h4>
+          <ul>
+            <li>42 Rue des P&acirc;tissiers</li>
+            <li>Indiranagar, Bengaluru 560038</li>
+            <li>+91 80 4567 8900</li>
+            <li>hello@maisondupain.in</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Opening Hours</h4>
+          <ul>
+            <li>Mon &ndash; Fri: 7 AM &ndash; 10 PM</li>
+            <li>Saturday: 8 AM &ndash; 10 PM</li>
+            <li>Sunday: 8 AM &ndash; 9 PM</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Google Maps</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Maison du Pain. All rights reserved.</p>
+        <p class="credit">Demo crafted by Axis Studio</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
