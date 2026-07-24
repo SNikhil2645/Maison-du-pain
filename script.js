@@ -1,32 +1,7 @@
-// ===== PRELOADER =====
-window.addEventListener('load', () => {
-  setTimeout(() => document.getElementById('preloader').classList.add('done'), 2000);
-});
-
-// ===== CUSTOM CURSOR =====
-const cursor = document.getElementById('cursor');
-const cursorDot = document.getElementById('cursorDot');
-let mouseX = 0, mouseY = 0, cursorX = 0, cursorY = 0;
-document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
-function animateCursor() {
-  cursorX += (mouseX - cursorX) * 0.12;
-  cursorY += (mouseY - cursorY) * 0.12;
-  cursor.style.left = cursorX - 10 + 'px';
-  cursor.style.top = cursorY - 10 + 'px';
-  cursorDot.style.left = mouseX - 3 + 'px';
-  cursorDot.style.top = mouseY - 3 + 'px';
-  requestAnimationFrame(animateCursor);
-}
-animateCursor();
-document.querySelectorAll('a,button,.insta-item,.specialty-card,.testimonial-card,.delivered-card,.cake-builder-option').forEach(el => {
-  el.addEventListener('mouseenter', () => cursor.classList.add('active'));
-  el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
-});
-
 // ===== SCROLL PROGRESS =====
 window.addEventListener('scroll', () => {
   const scrolled = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-  document.getElementById('scrollProgress').style.width = scrolled + '%';
+  document.getElementById('scrollProgress').style.transform = 'scaleX(' + (scrolled / 100) + ')';
 });
 
 // ===== NAVBAR =====
@@ -214,7 +189,7 @@ function updateCake() {
       ${layersHTML}
     </g>
     ${toppingHTML}
-    <text x="125" y="${190 + 30}" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9" fill="#A89279" letter-spacing="1">${cakeConfig.size.toUpperCase()}</text>
+    <text x="125" y="${190 + 30}" text-anchor="middle" font-family="'Albert Sans',sans-serif" font-size="9" fill="#A89279" letter-spacing="1">${cakeConfig.size.toUpperCase()}</text>
   `;
 
   cakeName.textContent = c.name;
