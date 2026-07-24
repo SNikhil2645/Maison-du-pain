@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-24T13:45:00Z",
+  "title": "Design System: Maison du Pain",
+  "extensions": {
+    "colorMeta": {
+      "brand-900": { "role": "primary", "displayName": "Deep Oxblood", "canonical": "oklch(35% 0.14 30)" },
+      "brand-500": { "role": "primary", "displayName": "Terracotta Primary", "canonical": "oklch(60% 0.18 30)" },
+      "bg-base": { "role": "neutral", "displayName": "Off-White Tinted Base", "canonical": "oklch(99% 0.005 30)" },
+      "bg-surface": { "role": "neutral", "displayName": "Pure White Surface", "canonical": "oklch(100% 0 0)" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Used sparingly for hero headers and section titles. Allowed to breathe." },
+      "body": { "displayName": "Body", "purpose": "Used for paragraph copy. Capped at 65ch width for optimal reading." }
+    },
+    "shadows": [
+      { "name": "Card Shadow", "value": "0 4px 24px oklch(0% 0 0 / .04)", "purpose": "Ambient, soft resting state for specialty cards." },
+      { "name": "Hover Lift", "value": "0 8px 30px oklch(60% 0.18 30 / .3)", "purpose": "A pronounced, tinted glow when interacting with primary buttons." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "btn-gold",
+      "description": "Full pill shape for major CTAs.",
+      "html": "<button class=\"ds-btn-gold\">Order Custom Cake</button>",
+      "css": ".ds-btn-gold { display: inline-flex; align-items: center; justify-content: center; padding: 18px 42px; border-radius: 100px; font-family: 'Albert Sans', sans-serif; font-size: 1.05rem; font-weight: 500; letter-spacing: 0.5px; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); background: oklch(60% 0.18 30); color: oklch(100% 0 0); border: 1px solid oklch(60% 0.18 30); cursor: pointer; } .ds-btn-gold:hover { background: transparent; color: oklch(60% 0.18 30); transform: translateY(-2px); box-shadow: 0 8px 30px oklch(60% 0.18 30 / 0.3); }"
+    },
+    {
+      "name": "Specialty Card",
+      "kind": "card",
+      "refersTo": "specialty-card",
+      "description": "Ambient resting card for specialties.",
+      "html": "<div class=\"ds-specialty-card\"><div class=\"ds-specialty-body\"><h3>Artisan Breads</h3><p>Hand-shaped and baked in small batches.</p></div></div>",
+      "css": ".ds-specialty-card { background: oklch(100% 0 0); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 24px oklch(0% 0 0 / 0.04); transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1); position: relative; border: 1.5px solid transparent; } .ds-specialty-card:hover { border-color: oklch(60% 0.18 30); transform: translateY(-4px); } .ds-specialty-body { padding: 32px; font-family: 'Albert Sans', sans-serif; } .ds-specialty-body h3 { font-size: 1.3rem; margin-bottom: 10px; color: oklch(25% 0.06 30); font-family: 'Albert Sans', sans-serif; font-weight: 500; } .ds-specialty-body p { font-size: 0.92rem; color: oklch(50% 0.06 30); line-height: 1.7; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Artisanal Sanctuary",
+    "overview": "Warm, elegant, and deeply crafted. This design system leans into the physical, tactile nature of artisan baking—focusing on patience, craft, and premium ingredients. It explicitly avoids the artificial constraints of SaaS scaffolding, flat generic neutrals, and over-animated \"web 3\" tropes.",
+    "keyCharacteristics": [
+      "Muted, deeply saturated brand tones anchored in baked terracotta",
+      "Soft layering with diffuse ambient shadows",
+      "Refined, editorial typography pairing a classic serif with a warm geometric sans",
+      "Tactile, generously padded touch targets"
+    ],
+    "rules": [
+      { "name": "The Restrained Strategy Rule", "body": "The brand relies heavily on the \"Committed\" color strategy where the saturated terracotta sets the identity but never overwhelms the content. Neutrals are tinted toward the brand hue, never generic gray.", "section": "colors" },
+      { "name": "The Artisanal Type Rule", "body": "Never use training-data defaults (Inter, Roboto) paired with generic serifs (Playfair). Treat typography as editorial craft.", "section": "typography" },
+      { "name": "The Tactile Restraint Rule", "body": "Elements must never employ harsh, narrow drop-shadows. Shadows should feel ambient and diffuse, casting a soft, colored glow where appropriate.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do cap body text line length at 65ch.",
+      "Do tint neutral backgrounds slightly toward the primary brand hue to retain warmth.",
+      "Do use Forum strictly for display typography without faux bolding."
+    ],
+    "donts": [
+      "Don't use standard emojis as design elements; use proper SVGs or rely on elegant typography.",
+      "Don't use generic AI scaffolding like marquee animations, numbered eyebrows, or custom cursors.",
+      "Don't mix CSS transitions that cause layout thrashing (e.g., width); use transform instead.",
+      "Don't use the SaaS \"hero-metric\" template with large gradient stats grids."
+    ]
+  }
+}
